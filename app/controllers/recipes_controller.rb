@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
 	before_action :find_recipe, only: [:show, :edit, :update, :destroy]
 
 	def index
-		
+		@recipe = Recipe.all.order("created_at DESC")
 	end
 
 	def show
@@ -14,7 +14,13 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-		@recipe = Recipe.new(recipe_params)
+		@recipe = current_user.recipes.build(recipe_params)
+
+		if @recipe.save
+			redirect_to @recipe, notice: "Successfully created new recipe"
+		else
+			render 'new'
+		end
 	end
 
 	private
