@@ -9,5 +9,3 @@ class CreateRecipes < ActiveRecord::Migration[5.1]
     end
   end
 end
-
-10:45
