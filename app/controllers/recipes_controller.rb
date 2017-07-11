@@ -14,13 +14,29 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-		@recipe = current_user.recipes.build(recipe_params)
+		@recipe = Recipe.new(recipe_params)
 
 		if @recipe.save
 			redirect_to @recipe, notice: "Successfully created new recipe"
 		else
 			render 'new'
 		end
+	end
+
+	def edit
+		
+	end
+
+	def update
+		if @recipe.update(recipe_params)
+			redirect_to @recipe
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		
 	end
 
 	private
