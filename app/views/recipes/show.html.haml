@@ -22,10 +22,9 @@
 					- @recipe.directions.each do |direction|
 						%li= direction.step
 
-= image_tag @recipe.image.url(:medium, class: "recipe-image")
-%h1= @recipe.title
-%p= @recipe.description
+.row
+	.col-md-12
 
-=link_to "Back", root_path, class: "btn btn-default"
-=link_to "Edit", edit_recipe_path, class: "btn btn-default"
-=link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+		=link_to "Back", root_path, class: "btn btn-default"
+		=link_to "Edit", edit_recipe_path, class: "btn btn-default"
+		=link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
