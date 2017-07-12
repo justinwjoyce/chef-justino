@@ -1,7 +1,7 @@
 - @recipe.each_slice(3) do |recipes|
-	.row
+	.row{:style => "margin-left: 30px; margin-right: 30px;"}
 		- recipes.each do |recipe|
-			.col-md-4
+			.col-sm-4
 				.recipe
 					.image_wrapper
 						= link_to recipe do

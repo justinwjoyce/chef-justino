@@ -31,6 +31,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'paperclip', '~> 5.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.10'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'sprockets', '~> 3.7', '>= 3.7.1'
+gem 'devise', '~> 4.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
